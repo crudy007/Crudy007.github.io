@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Football</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar">
+		<a onclick="redirectToTab('tab1.html')">Tab 1</a>
+		<a onclick="redirectToTab('tab2.html')">Tab 2</a>
+		<a onclick="redirectToTab('contacts.html')">Contacts</a>
+    </nav>	
+</header>
+
+<main class="content">
+    <article class="article">
+        <h1>Highlight of the week</h1>
+        <div id="tab1" class="tab-content">
+            <!-- Content for Tab 1 -->
+            <p>This is the content for Tab 1.</p>
+        </div>
+        <div id="tab2" class="tab-content">
+            <!-- Content for Tab 2 -->
+            <p>This is the content for Tab 2.</p>
+        </div>
+        <div id="tab3" class="tab-content">
+            <!-- Content for Tab 3 -->
+            <p>This is the content for Tab 3.</p>
+        </div>
+    </article>
+</main>
+
+<script>
+    function redirectToTab(tabUrl) {
+        window.location.href = tabUrl;
+    }
+</script>
+</body>
+</html>
