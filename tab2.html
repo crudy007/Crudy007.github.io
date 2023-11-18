@@ -1,10 +1,37 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Football</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <h1>whats up</h1>
+
+    <header class="header">
+        <div class="tab-container">
+			<a class="tab-button" onclick="redirectToTab('index.html')">Home</a>
+            <a class="tab-button" onclick="redirectToTab('tab2.html')">Tab 2</a>
+            <a class="tab-button" onclick="redirectToTab('contact.html')">Contact</a>
+        </div>
+    </header>
+    
+
+<main class="content">
+    <article class="article">
+        <h1>TAB 2 content</h1>
+        <div id="tab2" class="tab-content">
+            <!-- Content for Tab 1 -->
+         
+        </div>
+    </article>
+</main>
+
+<script>
+    function redirectToTab(tabUrl) {
+        window.location.href = tabUrl;
+    }
+</script>
 </body>
 </html>

@@ -5,6 +5,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello world</h1>
+    <header class="header">
+        <div class="tab-container">
+			<a class="tab-button" onclick="redirectToTab('index.html')">Home</a>
+            <a class="tab-button" onclick="redirectToTab('tab2.html')">Tab 2</a>
+            <a class="tab-button" onclick="redirectToTab('contact.html')">Contact</a>
+        </div>
+    </header>
+    <h1>Front page</h1>
+
+    <script>
+        function redirectToTab(tabUrl) {
+            window.location.href = tabUrl;
+        }
+    </script>
 </body>
 </html>

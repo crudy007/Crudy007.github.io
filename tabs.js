@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Your JavaScript code here
+
 
     function openTab(tabId) {
         console.log("openTab called with tabId: " + tabId);
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById(tabId).style.display = "block";
     }
 
-    // You can include other JavaScript code related to your website here
+    
 });
 
 
