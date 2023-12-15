@@ -3,9 +3,13 @@
 .tab-container {
     background-color: #333;
     overflow: hidden;
-    position: sticky; /* Make the navigation bar sticky */
+    position: fixed; /* Make the navigation bar sticky */
     top: 0; /* Stick the navigation bar to the top of the viewport */
+    width: 100%;
     z-index: 100; /* Ensure the navigation bar is above other content */
+    display: flex;
+    justify-content: center;
+   
 }
 
 /* Style for the tab buttons */
@@ -21,17 +25,19 @@
 
 /* Change the color of tabs on hover */
 .tab-button:hover {
-    background-color: #555;
+    background-color: #379b47;
 }
 
-
-/* Change the color of links on hover */
-.navbar a:hover {
-    background-color: #ddd; /* Background color on hover */
-    color: black; /* Text color on hover */
+.content {
+    margin-left: 144px; /* This should be the same as your sidebar width */
+    margin-top: 0px; /* This should be the same as your navigation tabs height */
+    padding: 30px; /* Adjust as needed for padding inside the content area */
+    
+    min-height: calc(100vh - 50px); /* Adjust the height to fill the screen, minus the height of the tabs */
+    box-sizing: border-box; /* Include padding in the width and height calculations */
+    z-index: 1;
+      
 }
-
-
 
 /* Style for the form labels */
 label {
@@ -69,20 +75,136 @@ input[type="submit"]:hover {
     background-color: #555; /* Background color on hover */
 }
 
+body
+{
+    background-color:darkslategray;
+}
+
+.sidebar {
+    flex: 0 0 200px; /* sets the sidebar width to a fixed 200 pixels. The first 0 is the flex-grow factor, the second 0 is the flex-shrink factor, and 200px is the flex-basis */
+    background: #222;
+    color: #fff;
+    padding: 1rem;
+    height: calc(100vh - 100px); /* Adjust the height as per your header and footer */
+}
 
 
-
-
-.navbar {
+/* Sidebar styles */
+.sidebar {
     background-color: #333;
-    overflow: hidden;
-    position: sticky;
+    color: #fff;
+    width: 150px; /* Adjust the width as needed */
+    height: 100%; /* Makes the sidebar cover the entire height of the viewport */
+    position: fixed; /* Keeps the sidebar fixed in place even when scrolling */
     top: 0;
-    z-index: 100;
+    left: 0;
+    overflow-y: auto; /* Add a vertical scrollbar if content overflows */
+}
+
+/* Sidebar navigation links */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    
+}
+
+.sidebar li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #fff;
 }
 
 
-.main-container {
-    padding-top: 80px;
+/* Search Bar styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Push the search bar to the right */
+    background: #444;
+    padding: 10px;
 }
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.search-bar button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Style for the background image container */
+.background_image {
+    position: relative;
+}
+
+/* Style for the background image */
+.background_image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Style for the article container */
+.article {
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    width: 30%;
+    height: 71%;
+     /*Add a semi-transparent background color */
+    z-index: 1; /* Place the article on top of the background image */
+    padding: 20px; /* Adjust as needed */
+    margin-left: 100px;
+    color: white;
+    overflow: auto; /* Add scroll if content exceeds container height */
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+#revealButton {
+    font-size: 16px;
+    padding: 10px 20px;
+    position: absolute;
+    top: 18%;
+    left: 45%;
+    background-color: darkseagreen;
+}
+
+/* Style for the popup container */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Ensure the popup is on top of other content */
+}
+
+/* Style for the image inside the popup */
+.popup img {
+    max-width: 100%; /* Adjust the maximum width as needed */
+    max-height: 80vh; /* Adjust the maximum height as needed */
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+
 

@@ -5,30 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Football</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="header.js"></script>
+    <script type="module" src="main.js"></script>
+    <my-header></my-header>
 
 </head>
 <body>
 
-
-	<header class="header">
-		<div class="tab-container">
-			<a class="tab-button" onclick="redirectToTab('index.html')">Home</a>
-			<a class="tab-button" onclick="redirectToTab('tab2.html')">Tab 2</a>
-			<a class="tab-button" onclick="redirectToTab('contact.html')">Contact</a>
-		</div>
-	</header>
-	
-
-
 <main class="content">
-    <article class="article">
-        <h1>Highlight of the week</h1>
-        <div id="tab1" class="tab-content">
-            <!-- Content for Tab 1 -->
-            <p>This is the content for HOME PAGE !!.</p>
-   
-        </div>
-    </article>
+
+            <div class="background_image"><img src="Pictures/Ronaldo_RED.jpg" alt="the goat"></div>
+            <p1 class="article">
+               <h1>The Rising Star at Real Madrid</h1> 
+               <p>In the world of football, few stories have captured the imagination quite like the rise of a young talent who made a life-changing move to Real Madrid Football Club. Today, we explore the incredible journey of this player at the world-renowned Real Madrid.</p>
+               <h2>The Young Prodigy</h2>
+               <p>This player's journey to football stardom began at a young age. Born on June 29, 2003, they displayed a remarkable talent for the sport from the very beginning.</p>
+               <h2>Rising Through the Ranks</h2>
+               <p>Their breakthrough moment came when they made their first-team debut for Birmingham City Football Club in August 2019, becoming the club's youngest-ever first-team player at the age of 16. Real Madrid expressed a keen interest in this player.</p>
+               <h2>Player of the Month</h2>
+               <p>Shortly after joining Real Madrid, this player made an immediate impact, earning the prestigious "Player of the Month" award for October. Their exceptional performances in midfield left fans and pundits in awe.</p>
+               <h2>The Future Looks Bright</h2>
+               <p>This player has cemented their place as one of the most exciting talents in modern football. As football fans eagerly watch their rise, one thing is clear: their success story is far from over, and the world can expect to witness many more incredible moments from this footballing prodigy.</p>
+            </p1>
+
+          
+            <button id="revealButton">Click to reveal the player!</button>
+            <div class="popup" id="popup">
+                <img src="Pictures/Bellingham.jpg" alt="tiny goat">
+            </div>
+            <audio id="sound">
+                <source src="Audio/[ Jude Bellingham ] .mp3" type="audio/mpeg">
+            </audio>
+            
+    </main>
+    
+     
+ 
 </main>
 
 <script>
@@ -36,5 +48,9 @@
         window.location.href = tabUrl;
     }
 </script>
+<script src="Jquery/jquery-3.7.1.js"></script>
+
+
+
 </body>
 </html>

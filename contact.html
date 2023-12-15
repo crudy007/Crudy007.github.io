@@ -5,19 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="style.css"> 
+    <script type="module" src="header.js"></script>
+    <script type="module" src="main.js"></script>
+    <my-header></my-header>
+    
 </head>
 <body>
-    <header class="header">
-        <div class="tab-container">
-            <a class="tab-button" onclick="redirectToTab('index.html')">Home</a>
-            <a class="tab-button" onclick="redirectToTab('tab2.html')">Tab 2</a>
-            <a class="tab-button" onclick="redirectToTab('contact.html')">Contact</a>
-        </div>
 
-    </header>
 
     <main class="content">
-        <article class="article">
+        <contact class="contact">
             <h1>Contact Us</h1>
             <form action="tack.html" method="post">
                 <label for="name">Name:</label>
@@ -31,7 +28,7 @@
 
                 <input type="submit" value="Submit">
             </form>
-        </article>
+        </contact>
     </main>
 
 

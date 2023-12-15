@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Football</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="header.js"></script>
+    <script type="module" src="main.js"></script>
+    <my-header></my-header>
 
 </head>
 <body>
 
-    <header class="header">
-        <div class="tab-container">
-			<a class="tab-button" onclick="redirectToTab('index.html')">Home</a>
-            <a class="tab-button" onclick="redirectToTab('tab2.html')">Tab 2</a>
-            <a class="tab-button" onclick="redirectToTab('contact.html')">Contact</a>
-        </div>
-    </header>
-    
-
 <main class="content">
-    <article class="article">
-        <h1>TAB 2 content</h1>
+    <tab2 class="tab2">
+        <h1>Calculator</h1>
         <div id="tab2" class="tab-content">
-            <!-- Content for Tab 1 -->
-         
+            <!-- Content for Tab 2 -->
+            <form id="calculationForm">
+                <input type="text" id="number1" placeholder="Enter a number">
+                <input type="text" id="number2" placeholder="Enter another number">
+                <button id="calculatebutton">Calculate</button>
+
+
+            </form>
+            
         </div>
-    </article>
+    </tab2>
 </main>
 
 <script>
@@ -33,5 +34,35 @@
         window.location.href = tabUrl;
     }
 </script>
+<script src="Jquery/jquery-3.7.1.js"></script>
+
+<script>
+// Get the form element by its ID
+const form = document.getElementById("calculationForm");
+
+// Add an event listener to the form for form submission
+form.addEventListener("submit", function(event) {
+    // Get the values entered by the user and convert them to numbers
+    const num1 = parseFloat(document.getElementById("number1").value);
+    const num2 = parseFloat(document.getElementById("number2").value);
+
+    // Check if the entered values are valid numbers
+    if (!isNaN(num1) && !isNaN(num2)) {
+        // Perform the calculation (addition)
+        const sum = num1 + num2;
+
+        // Display the result in an alert
+        alert(`The sum of ${num1} and ${num2} is ${sum}`);
+    } else {
+        // Display an error message if the input values are not valid numbers
+        alert("Please enter valid numbers.");
+    }
+});
+
+
+</script>
+
+
+
 </body>
 </html>
