@@ -9,19 +9,33 @@
     z-index: 100; /* Ensure the navigation bar is above other content */
     display: flex;
     justify-content: center;
-   
+    align-items: flex-end; /* Align items to the bottom */
+  
 }
 
 /* Style for the tab buttons */
 .tab-button {
-    float: left;
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     cursor: pointer;
+    margin: 0 5px;
+    margin-bottom: 5px; /* Adjust as needed to align with the logo */
 }
+
+/* Additional styles for the logo to ensure it aligns at the bottom */
+.logo {
+    align-self: flex-end; /* Align the logo at the bottom */
+    margin-bottom: 5px; /* Adjust as needed to align with the text */
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block; /* Add this line */
+}
+
 
 /* Change the color of tabs on hover */
 .tab-button:hover {
@@ -206,12 +220,5 @@ button {
     margin: 0 auto; /* Center the image horizontally */
 }
 
-.logo{
-    width: 50px; /* Adjust the size as needed */
-    height: 50px; /* Adjust the size as needed */
-    border-radius: 50%;
-    overflow: hidden;
-    display: inline-block; /* Add this line */
-}
 
 
