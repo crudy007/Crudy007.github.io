@@ -206,5 +206,12 @@ button {
     margin: 0 auto; /* Center the image horizontally */
 }
 
+.logo{
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block; /* Add this line */
+}
 
 
